@@ -153,6 +153,41 @@ const PreviewContent = ({ resumeData }) => {
         )}
       </div>
 
+      {/* Work Experience Section */}
+<div>
+  <h2 className="text-xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-200">
+    Work Experience
+  </h2>
+  {resumeData.work && resumeData.work.length > 0 ? (
+    <div className="space-y-4">
+      {resumeData.work.map((job, index) => (
+        <div key={index} className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+            <div className="flex-1">
+              <label className="block text-sm font-medium text-gray-700">Job Title</label>
+              <h3 className="text-lg font-semibold text-gray-900 mt-1">{job.title}</h3>
+            </div>
+            <div className="flex-1">
+              <label className="block text-sm font-medium text-gray-700">Employment Period</label>
+              <span className="text-sm text-gray-600 mt-1">{job.startDate} - {job.endDate || 'Present'}</span>
+            </div>
+          </div>
+          <div className="mt-4">
+            <label className="block text-sm font-medium text-gray-700">Company</label>
+            <p className="text-sm font-medium text-gray-700">{job.company}</p>
+          </div>
+          <div className="mt-4">
+            <label className="block text-sm font-medium text-gray-700">Job Description</label>
+            <p className="text-sm text-gray-600">{job.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <p className="text-gray-500 mt-4">No work experience provided.</p>
+  )}
+</div>
+
       </div>
   );
 };
