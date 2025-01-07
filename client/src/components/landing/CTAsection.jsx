@@ -14,7 +14,7 @@ const CTAsection = () => {
         <p className="text-xl text-gray-600 mb-8">
           Join thousands of professionals who have already created impressive resumes using our platform.
         </p>
-        <Link to="./"rb>
+        <Link to="./rb">
          <button className="inline-flex items-center justify-center px-6 py-3 border border-transparent 
           text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 hover:bg-blue-700 transition-all transform hover:scale-105 hover:shadow-lg">
           Get Started For Free
